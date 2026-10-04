@@ -1,0 +1,8 @@
+# Source files kept locally only (not published)
+# - patent PDFs list inventors' home addresses
+# - the spreadsheet holds GPAs and grant details
+# - original photo and certificates are replaced by resized copies
+*.pdf
+*.xlsx
+Yoon.jpg
+[[]실적[]]*/
