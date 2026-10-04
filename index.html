@@ -192,6 +192,39 @@
         }
         .lightbox button:focus-visible { outline: 2px solid #fff; }
 
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 1.25rem;
+        }
+        .press-card {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--bg);
+            color: var(--text-color);
+            transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+        }
+        .press-card:hover {
+            text-decoration: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+        .press-thumb { aspect-ratio: 16 / 9; background: var(--light-bg); border-bottom: 1px solid var(--border-color); }
+        .press-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .press-placeholder {
+            display: flex; align-items: center; justify-content: center;
+            width: 100%; height: 100%;
+            font-weight: 700; font-size: 1.1rem; color: var(--meta-color);
+        }
+        .press-body { padding: 0.8rem 0.95rem 1rem; }
+        .press-title { font-weight: 600; font-size: 0.93rem; line-height: 1.45; color: var(--heading-color); }
+        .press-card:hover .press-title { color: var(--primary-color); }
+        .press-source { font-size: 0.82rem; color: var(--meta-color); margin-top: 0.4rem; }
+
         footer { color: var(--meta-color); font-size: 0.85rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem; }
 
         @media (max-width: 768px) {
@@ -275,6 +308,7 @@
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#patents">Patents</a></li>
                 <li><a href="#awards">Awards</a></li>
+                <li><a href="#press">Press</a></li>
             </ul>
         </nav>
     </aside>
@@ -462,7 +496,7 @@
                 <div class="pub-id"><span class="badge">J6</span></div>
                 <div>
                     <div class="pub-title">Mitoquinone Inactivates Mitochondrial Chaperone TRAP1 by Blocking the Client Binding Site</div>
-                    <div class="pub-authors"><span class="me">Yoon, N. G.</span><sup>*</sup>, Lee, H.<sup>*</sup>, Kim, S. Y., Hu, S., Kim, D., Yang, S., ..., Kang, B. H.<span class="tag">Co-first author</span></div>
+                    <div class="pub-authors"><span class="me">Yoon, N. G.</span><sup>*</sup>, Lee, H.<sup>*</sup>, Kim, S. Y., Hu, S., Kim, D., Yang, S., ..., Kang, B. H.<span class="tag">Co-first author</span><span class="tag tag-pi">Cover article</span></div>
                     <div class="pub-venue">Journal of the American Chemical Society, 143(47), 19684–19696 (2021)</div>
                     <div class="pub-links"><a href="https://doi.org/10.1021/jacs.1c07099" target="_blank" rel="noopener">DOI</a><span class="pub-if">IF 15.419</span></div>
                 </div>
@@ -629,6 +663,69 @@
             <div class="row">
                 <div class="row-year">2016</div>
                 <div class="row-body"><strong>Best Poster Award</strong>, <span class="org">Korean Society for Mitochondrial Research &amp; Medicine (KSMRM)</span><div class="row-detail">10th Annual Conference of KSMRM</div> <a href="images/awards/2016-ksmrm-best-poster.jpg" class="badge cert-link" data-caption="Best Poster Award, KSMRM (2016)" target="_blank" rel="noopener">Certificate</a></div>
+            </div>
+        </section>
+
+        <section id="press">
+            <h2>Press</h2>
+            <p style="margin-bottom:1.25rem">Selected Korean media coverage of my research. Titles are translated into English.</p>
+            <div class="press-grid">
+                <a class="press-card" href="https://biz.sbs.co.kr/article/20000326486" target="_blank" rel="noopener">
+                    <div class="press-thumb"><img src="images/press/2026-08-sbs-biz.jpg" alt="" loading="lazy" width="640" height="360"></div>
+                    <div class="press-body">
+                        <div class="press-title">“Targeting Cancer-Supporting Adipocytes Opens a New Path to Overcome Chemotherapy Resistance in Breast Cancer”</div>
+                        <div class="press-source">SBS Biz · Aug. 2026</div>
+                    </div>
+                </a>
+                <a class="press-card" href="https://www.yna.co.kr/view/AKR20260804097700057" target="_blank" rel="noopener">
+                    <div class="press-thumb"><img src="images/press/2026-08-yonhap.jpg" alt="" loading="lazy" width="640" height="360"></div>
+                    <div class="press-body">
+                        <div class="press-title">“Researchers Discover a Regulatory Protein That Enables Adipocytes to Promote Cancer Growth”</div>
+                        <div class="press-source">Yonhap News Agency · Aug. 2026</div>
+                    </div>
+                </a>
+                <a class="press-card" href="https://www.mt.co.kr/thebio/2026/08/04/2026080408321555137" target="_blank" rel="noopener">
+                    <div class="press-thumb"><img src="images/press/2026-08-money-today.jpg" alt="" loading="lazy" width="640" height="360"></div>
+                    <div class="press-body">
+                        <div class="press-title">“Targeting the Adipocytes That Help Cancer Grow and Spread Opens a Path to Overcoming Chemotherapy Resistance”</div>
+                        <div class="press-source">Money Today · Aug. 2026</div>
+                    </div>
+                </a>
+                <a class="press-card" href="https://www.iusm.co.kr/news/articleView.html?idxno=1066256" target="_blank" rel="noopener">
+                    <div class="press-thumb"><img src="images/press/2026-08-ulsan-maeil.jpg" alt="" loading="lazy" width="640" height="360"></div>
+                    <div class="press-body">
+                        <div class="press-title">“Researchers Identify TRAP1 as a Key Regulator That Turns Adipocytes into ‘Cancer Accomplices’”</div>
+                        <div class="press-source">Ulsan Maeil · Aug. 2026</div>
+                    </div>
+                </a>
+                <a class="press-card" href="https://www.metroseoul.co.kr/article/20260804500356" target="_blank" rel="noopener">
+                    <div class="press-thumb"><img src="images/press/2026-08-metro-seoul.jpg" alt="" loading="lazy" width="640" height="360"></div>
+                    <div class="press-body">
+                        <div class="press-title">“UNIST and National Cancer Center Team Identifies a Protein Behind Chemotherapy Resistance”</div>
+                        <div class="press-source">Metro Seoul · Aug. 2026</div>
+                    </div>
+                </a>
+                <a class="press-card" href="http://www.docdocdoc.co.kr/news/articleView.html?idxno=3041496" target="_blank" rel="noopener">
+                    <div class="press-thumb"><img src="images/press/2026-08-docdocdoc.jpg" alt="" loading="lazy" width="640" height="360"></div>
+                    <div class="press-body">
+                        <div class="press-title">“Protein Controlling Adipocytes Around Tumors Identified; Tumors Shrink by up to 56%”</div>
+                        <div class="press-source">Korean Doctors’ Weekly · Aug. 2026</div>
+                    </div>
+                </a>
+                <a class="press-card" href="https://www.viva100.com/article/20260805501182" target="_blank" rel="noopener">
+                    <div class="press-thumb"><img src="images/press/2026-08-bridge-economy.jpg" alt="" loading="lazy" width="640" height="360"></div>
+                    <div class="press-body">
+                        <div class="press-title">“UNIST and National Cancer Center Find a New Target to Lower Chemotherapy Resistance”</div>
+                        <div class="press-source">Bridge Economy · Aug. 2026</div>
+                    </div>
+                </a>
+                <a class="press-card" href="https://www.yna.co.kr/view/AKR20240115063800057" target="_blank" rel="noopener">
+                    <div class="press-thumb"><img src="images/press/2024-01-yonhap.jpg" alt="" loading="lazy" width="640" height="360"></div>
+                    <div class="press-body">
+                        <div class="press-title">“Eye-Drop Treatment Offers a New Approach for Ischemic Retinopathy”</div>
+                        <div class="press-source">Yonhap News Agency · Jan. 2024</div>
+                    </div>
+                </a>
             </div>
         </section>
 
